@@ -3,7 +3,7 @@
 /*.log
 
 # Local binaries and coverage output
-/threadnest
+/riff
 /*.exe
 /tmp/
 /coverage.out

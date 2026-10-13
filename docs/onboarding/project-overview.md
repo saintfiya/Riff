@@ -4,7 +4,7 @@
 
 ## 一句话模型
 
-**ThreadNest** 是一个面向社区用户的单进程 Go Web 应用：访客可注册、登录和分页浏览帖子，登录用户可查看社区、发布帖子、查看帖子详情并投票；Gin 提供 HTTP 接口与静态页面，GORM/MySQL 保存用户、社区和帖子，Redis 有序集合保存帖子的发布时间、热度分数和逐用户投票状态，JWT 承载登录身份。这个模型由 `router/router.go: SetupRouter`、`logic/*` 和 `dao/*` 的实际调用共同验证，而不仅来自 Swagger 描述。
+**Riff** 是一个面向社区用户的单进程 Go Web 应用：访客可注册、登录和分页浏览帖子，登录用户可查看社区、发布帖子、查看帖子详情并投票；Gin 提供 HTTP 接口与静态页面，GORM/MySQL 保存用户、社区和帖子，Redis 有序集合保存帖子的发布时间、热度分数和逐用户投票状态，JWT 承载登录身份。这个模型由 `router/router.go: SetupRouter`、`logic/*` 和 `dao/*` 的实际调用共同验证，而不仅来自 Swagger 描述。
 
 ## 用户与主要场景
 
@@ -85,7 +85,7 @@ GET http://127.0.0.1:8888/ping
 - Swagger 已覆盖当前九个业务路由并区分公开/受保护接口；后续改路由时仍需重新执行 `swag init`，避免再次漂移。
 - 自动化测试尚未覆盖真实 MySQL/Redis、Lua 并发和补偿失败；本轮使用隔离 Compose 环境完成了成功链、撤销投票和 Redis 故障补偿 smoke test。
 - 当前 Windows 环境缺少 C 编译器，因此 `go test -race ./...` 无法执行；上线前应在支持 CGO 的 CI/Linux 环境补跑竞态检测。
-- `threadnest_log` 是运行时产物，不是入门必读文件；`.gitignore` 已排除日志。恢复日志会去掉查询字符串并脱敏 Authorization、Cookie 等敏感头。
+- `riff_log` 是运行时产物，不是入门必读文件；`.gitignore` 已排除日志。恢复日志会去掉查询字符串并脱敏 Authorization、Cookie 等敏感头。
 
 ## 建议阅读顺序
 

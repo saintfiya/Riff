@@ -2,8 +2,8 @@ package logic
 
 import (
 	"errors"
-	"threadnest/dao/mysql"
-	"threadnest/models"
+	"riff/dao/mysql"
+	"riff/models"
 )
 
 func GetCommunityList() ([]*models.Community, error) {

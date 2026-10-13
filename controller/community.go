@@ -3,7 +3,7 @@ package controller
 import (
 	"errors"
 	"strconv"
-	"threadnest/logic"
+	"riff/logic"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"

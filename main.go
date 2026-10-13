@@ -1,8 +1,8 @@
 package main
 
-// @title ThreadNest API
+// @title Riff API
 // @version 1.0
-// @description ThreadNest 社区讨论项目 API 文档
+// @description Riff 社区讨论项目 API 文档
 // @termsOfService http://swagger.io/terms/
 
 // @contact.name sssss61616@gmail.com
@@ -25,15 +25,15 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"threadnest/conf"
-	"threadnest/controller"
-	"threadnest/dao/mysql"
-	"threadnest/dao/redis"
-	"threadnest/logger"
-	"threadnest/pkg/jwt"
-	"threadnest/pkg/snowflake"
-	"threadnest/router"
-	"threadnest/setting"
+	"riff/conf"
+	"riff/controller"
+	"riff/dao/mysql"
+	"riff/dao/redis"
+	"riff/logger"
+	"riff/pkg/jwt"
+	"riff/pkg/snowflake"
+	"riff/router"
+	"riff/setting"
 	"time"
 
 	"go.uber.org/zap"

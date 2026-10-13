@@ -1,4 +1,4 @@
-name: threadnest
+name: riff
 
 services:
   mysql:
@@ -7,7 +7,7 @@ services:
       - "33061:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: "threadnest"
+      MYSQL_DATABASE: "riff"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-proot"]
       interval: 5s

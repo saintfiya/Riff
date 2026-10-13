@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 	"strconv"
-	"threadnest/dao/redis"
-	"threadnest/models"
+	"riff/dao/redis"
+	"riff/models"
 
 	"go.uber.org/zap"
 )

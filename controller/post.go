@@ -3,8 +3,8 @@ package controller
 import (
 	"errors"
 	"strconv"
-	"threadnest/logic"
-	"threadnest/models"
+	"riff/logic"
+	"riff/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "ThreadNest 社区讨论项目 API 文档",
-        "title": "ThreadNest API",
+        "description": "Riff 社区讨论项目 API 文档",
+        "title": "Riff API",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
             "name": "sssss61616@gmail.com",

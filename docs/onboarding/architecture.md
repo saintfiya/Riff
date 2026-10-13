@@ -81,13 +81,13 @@ JWT： /api/v1/community、/api/v1/community/:id、/api/v1/post、/api/v1/post/:
 
 ### Redis
 
-键统一由 `dao/redis/keys.go: getRedisKey` 添加 `threadnest:` 前缀：
+键统一由 `dao/redis/keys.go: getRedisKey` 添加 `riff:` 前缀：
 
 | Key | 类型 | member | score | 写入点 |
 | --- | --- | --- | --- | --- |
-| `threadnest:post:time` | ZSET | post ID | Unix 发布时间 | `redis.CreatePost` |
-| `threadnest:post:score` | ZSET | post ID | 初始发布时间 + 投票增量 | `redis.CreatePost` / `redis.VoteForPost` |
-| `threadnest:post:voted:<postID>` | ZSET | user ID | `-1` 或 `1` | `redis.VoteForPost` |
+| `riff:post:time` | ZSET | post ID | Unix 发布时间 | `redis.CreatePost` |
+| `riff:post:score` | ZSET | post ID | 初始发布时间 + 投票增量 | `redis.CreatePost` / `redis.VoteForPost` |
+| `riff:post:voted:<postID>` | ZSET | user ID | `-1` 或 `1` | `redis.VoteForPost` |
 
 投票接受 `0` 表示取消。允许期由 Redis 中的发布时间判断，为 7 天；每一票的分值是 432。`dao/redis/vote.go: voteScript` 在 Redis 内原子读取旧票、更新总分和个人状态，并让个人投票 key 在窗口结束时过期。没有实现将 Redis 投票汇总回 MySQL 的后台流程。
 

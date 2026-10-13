@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 	"sort"
-	"threadnest/dao/mysql"
-	"threadnest/dao/redis"
-	"threadnest/models"
-	"threadnest/pkg/snowflake"
+	"riff/dao/mysql"
+	"riff/dao/redis"
+	"riff/models"
+	"riff/pkg/snowflake"
 )
 
 func CreatePost(ctx context.Context, p *models.Post) error {

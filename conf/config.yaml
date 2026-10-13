@@ -1,14 +1,14 @@
 app:
   port: 8888
   version: "0.0.1"
-  appname: "threadnest"
+  appname: "riff"
   machine_id: 1
   start_time: "2026-08-31"
   mode: "dev"
 
 log:
   level: "debug"
-  filename: "threadnest_log"
+  filename: "riff_log"
   max_size: 200
   max_age: 30
   max_backups: 7
@@ -18,7 +18,7 @@ mysql:
   password: "123456"
   host: 127.0.0.1
   port: 3306 
-  dbname: threadnest
+  dbname: riff
 
 redis:
   host: 127.0.0.1

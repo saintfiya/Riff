@@ -4,7 +4,7 @@ package redis
 
 // redis key注意使用命名空间的方式,方便查询和拆分
 const (
-	Prefix             = "threadnest:"
+	Prefix             = "riff:"
 	KeyPostTimeZset    = "post:time"   //zset;帖子及发帖时间
 	KeyPostScoreZset   = "post:score"  //zset;帖子及投票的分数
 	KeyPostVotedZsetPF = "post:voted:" //zset;记录用户及投票的类型;参数是post id

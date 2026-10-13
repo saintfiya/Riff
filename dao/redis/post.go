@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"strconv"
-	"threadnest/models"
+	"riff/models"
 
 	redisClient "github.com/redis/go-redis/v9"
 )
@@ -95,4 +95,5 @@ func GetPostVoteData(ctx context.Context, ids []int64) (map[int64]int64, error) 
 		votes[id] = command.up.Val() - command.down.Val()
 	}
 	return votes, nil
+
 }

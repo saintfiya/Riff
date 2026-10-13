@@ -3,7 +3,7 @@ package setting
 import (
 	"fmt"
 	"strings"
-	"threadnest/conf"
+	"riff/conf"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"

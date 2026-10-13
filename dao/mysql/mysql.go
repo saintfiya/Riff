@@ -2,8 +2,8 @@ package mysql
 
 import (
 	"fmt"
-	"threadnest/conf"
-	"threadnest/models"
+	"riff/conf"
+	"riff/models"
 
 	"go.uber.org/zap"
 	"gorm.io/driver/mysql"

@@ -13,26 +13,26 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN go build -trimpath -ldflags="-s -w" -o /tmp/threadnest .
+RUN go build -trimpath -ldflags="-s -w" -o /tmp/riff .
 
 FROM alpine:3.23
 
 RUN apk add --no-cache ca-certificates tzdata \
-    && addgroup -S threadnest \
-    && adduser -S -G threadnest threadnest \
+    && addgroup -S riff \
+    && adduser -S -G riff riff \
     && mkdir -p /app \
-    && chown threadnest:threadnest /app
+    && chown riff:riff /app
 
 ENV TZ=Asia/Shanghai
 
 WORKDIR /app
 
-COPY --from=builder --chown=threadnest:threadnest /tmp/threadnest ./threadnest
-COPY --chown=threadnest:threadnest conf ./conf
-COPY --chown=threadnest:threadnest static ./static
-COPY --chown=threadnest:threadnest templates ./templates
+COPY --from=builder --chown=riff:riff /tmp/riff ./riff
+COPY --chown=riff:riff conf ./conf
+COPY --chown=riff:riff static ./static
+COPY --chown=riff:riff templates ./templates
 
-USER threadnest
+USER riff
 
 EXPOSE 8888
 
@@ -41,4 +41,4 @@ HEALTHCHECK --interval=10s --timeout=3s --start-period=10s --retries=5 \
 
 STOPSIGNAL SIGTERM
 
-ENTRYPOINT ["./threadnest"]
+ENTRYPOINT ["./riff"]

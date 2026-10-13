@@ -1,6 +1,6 @@
-# ThreadNest
+# Riff
 
-**ThreadNest** 是一个使用 Go 编写的社区讨论应用，产品形态参考 Reddit：用户可以加入不同社区、发布帖子，并通过投票参与内容排序。项目包含静态前端页面、Swagger API 文档、结构化日志和优雅停机能力；Go module 使用小写名称 `threadnest`。
+**Riff** 是一个使用 Go 编写的社区讨论应用，产品形态参考 Reddit：用户可以加入不同社区、发布帖子，并通过投票参与内容排序。项目包含静态前端页面、Swagger API 文档、结构化日志和优雅停机能力；Go module 使用小写名称 `riff`。
 
 项目采用分层单体结构：
 
@@ -66,7 +66,7 @@ MySQL 与 Redis 使用具名卷持久化数据。若需要同时清除本地开�
 准备以下环境：
 
 - Go 1.25 或兼容版本
-- MySQL，默认地址 `127.0.0.1:3306`，数据库名 `threadnest`
+- MySQL，默认地址 `127.0.0.1:3306`，数据库名 `riff`
 - Redis，默认地址 `127.0.0.1:6379`
 
 配置位于 [`conf/config.yaml`](conf/config.yaml)，也可以使用环境变量覆盖，例如 `MYSQL_HOST`、`MYSQL_PASSWORD`、`REDIS_HOST` 和 `APP_PORT`。
@@ -107,13 +107,9 @@ go vet ./...
 docker compose config --quiet
 ```
 
-<<<<<<< HEAD
-
-
-=======
 ## 从旧名称升级
 
-本次重命名同时更新了 Go module、二进制、MySQL 数据库名和 Redis key 前缀。已有旧版 MySQL/Redis 数据不会自动迁移；需要保留数据时，请先导出再导入到新的 `threadnest` 数据库和 `threadnest:` Redis 命名空间。
+本次重命名同时更新了 Go module、二进制、MySQL 数据库名和 Redis key 前缀。已有旧版 MySQL/Redis 数据不会自动迁移；需要保留数据时，请先导出再导入到新的 `riff` 数据库和 `riff:` Redis 命名空间。
 
 更完整的项目说明见：
 
@@ -121,4 +117,3 @@ docker compose config --quiet
 - [`docs/onboarding/architecture.md`](docs/onboarding/architecture.md)
 - [`docs/onboarding/core-call-chains.md`](docs/onboarding/core-call-chains.md)
 - [`docs/onboarding/learning-roadmap.md`](docs/onboarding/learning-roadmap.md)
->>>>>>> b7a1b57 (featuring:update)

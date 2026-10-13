@@ -31,7 +31,7 @@
 - `static/` 下的压缩 JS/CSS、source map 和图片：它们是前端构建产物，前端源码缺失。
 - `docs/docs.go`：Swagger 生成代码；优先读注释源和 YAML。
 - `controller/doc_response_models.go`：只服务 Swagger 的响应类型。
-- `threadnest_log`：运行时日志，不应作为常规学习材料；请求转储已有敏感信息脱敏保护。
+- `riff_log`：运行时日志，不应作为常规学习材料；请求转储已有敏感信息脱敏保护。
 - `wait-for.sh`：当前 Compose 已改用服务健康条件，此脚本未被调用，只作为历史辅助文件保留。
 
 ## 阶段 1：建立产品与路由模型

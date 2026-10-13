@@ -1,6 +1,6 @@
 .PHONY: all build run gotool clean help
 
-BINARY="threadnest"
+BINARY="riff"
 
 all: gotool build
 

@@ -7,7 +7,7 @@ import (
 	"os"
 	"runtime/debug"
 	"strings"
-	"threadnest/conf"
+	"riff/conf"
 	"time"
 
 	"github.com/gin-gonic/gin"

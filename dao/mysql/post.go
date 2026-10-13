@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"errors"
-	"threadnest/models"
+	"riff/models"
 
 	"gorm.io/gorm"
 )
@@ -19,6 +19,7 @@ func CreatePost(p *models.Post) error {
 	return nil
 }
 
+// DeletePost 删除帖子
 func DeletePost(postID int64) error {
 	return db.Where("post_id = ?", postID).Delete(&models.Post{}).Error
 }

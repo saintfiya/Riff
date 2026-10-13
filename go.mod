@@ -1,4 +1,4 @@
-module threadnest
+module riff
 
 go 1.25.4
 

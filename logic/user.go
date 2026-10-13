@@ -1,10 +1,10 @@
 package logic
 
 import (
-	"threadnest/dao/mysql"
-	"threadnest/models"
-	"threadnest/pkg/jwt"
-	"threadnest/pkg/snowflake"
+	"riff/dao/mysql"
+	"riff/models"
+	"riff/pkg/jwt"
+	"riff/pkg/snowflake"
 )
 
 var (

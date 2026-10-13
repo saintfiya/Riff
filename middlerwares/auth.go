@@ -2,8 +2,8 @@ package middlewares
 
 import (
 	"strings"
-	"threadnest/controller"
-	"threadnest/pkg/jwt"
+	"riff/controller"
+	"riff/pkg/jwt"
 
 	"github.com/gin-gonic/gin"
 )
